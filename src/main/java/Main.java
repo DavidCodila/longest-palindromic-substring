@@ -4,7 +4,7 @@ public class Main {
     }
 
     public static String longestPalindrome(String s) {
-        return "";
+        return s;
     }
 
     public static boolean isPalindrome(String s) {
