@@ -8,7 +8,9 @@ public class Main {
         String temp = "";
         for (int i = 0; i < s.length(); i++) {
             String subString = s.substring(i);
-            if (subString.length() < temp.length()) return temp;
+            if (subString.length() < temp.length()) {
+                return temp;
+            }
             if (isPalindrome(subString)) {
                 temp = StringHelper.getLargerString(temp, subString);
             } else {
