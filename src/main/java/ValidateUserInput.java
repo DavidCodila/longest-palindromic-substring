@@ -1,5 +1,3 @@
-import java.util.Arrays;
-
 public class ValidateUserInput {
     public static void validate (String s) {
         if (s == null || s.contains("\0") || s.isBlank()) {

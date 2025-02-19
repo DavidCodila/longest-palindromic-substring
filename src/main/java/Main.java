@@ -3,24 +3,8 @@ public class Main {
     public static void main(String[] args) {}
 
     public static String longestPalindrome(String s) {
-
         ValidateUserInput.validate(s);
 
-        if (isPalindrome(s)) return s;
-
-        return getForwardPassLargestPalindrome(s);
-    }
-
-    private static boolean isPalindrome(String s) {
-        for(int i = 0; i <= s.length() / 2; i++) {
-            if (s.charAt(i) != s.charAt(s.length() - 1 - i)) {
-                return false;
-            }
-        }
-        return true;
-    }
-
-    private static String getForwardPassLargestPalindrome(String s) {
         String temp = "";
         for (int i = 0; i < s.length(); i++) {
             String subString = s.substring(i);
@@ -32,6 +16,15 @@ public class Main {
             }
         }
         return temp;
+    }
+
+    private static boolean isPalindrome(String s) {
+        for(int i = 0; i <= s.length() / 2; i++) {
+            if (s.charAt(i) != s.charAt(s.length() - 1 - i)) {
+                return false;
+            }
+        }
+        return true;
     }
 
     private static String getBackwardPassLargestPalindrome(String s) {
